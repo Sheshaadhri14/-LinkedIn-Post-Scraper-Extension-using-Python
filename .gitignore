@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv
+*.zip
+cookies.json
+chromedriver
+chromedriver.exe
+*.log
