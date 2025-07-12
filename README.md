@@ -109,5 +109,7 @@ streamlit run main.py
 This tool is for **educational/personal use only**. Scraping LinkedIn content may violate their [Terms of Service](https://www.linkedin.com/legal/user-agreement). Use responsibly.
 
 ---
+OUPUT PREVIEW:
+<img width="1894" height="774" alt="image" src="https://github.com/user-attachments/assets/5515e0ab-9acf-41ab-83b9-84c0bb414429" />
 
 
