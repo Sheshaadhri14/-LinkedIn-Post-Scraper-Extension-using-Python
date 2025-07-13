@@ -166,8 +166,6 @@ def scrape_posts(driver, keyword, post_type_filter):
             "shares": shares,
             "post_link": post_link,
             "post_id": post_id,
-            "author_name": author_name,
-            "author_job_title": author_job_title,
             "author_profile": author_profile,
             "posted": posted
         })

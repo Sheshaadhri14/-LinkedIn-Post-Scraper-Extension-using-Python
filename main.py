@@ -127,7 +127,7 @@ if st.button("🚀 Start Scraping"):
             # Log unparsed dates
             unparsed = df[df["posted_date"].isna()]["posted"].tolist()
             if unparsed:
-                st.warning(f"⚠️ Could not parse dates for {len(unparsed)} posts (excluded from custom date range filter): {unparsed[:5]}...")
+                filtered_unparsed = [date for date in unparsed if date.strip()]
             # Apply custom date range filter if provided
             if start_date and end_date:
                 start_date = datetime.combine(start_date, datetime.min.time())
@@ -139,7 +139,7 @@ if st.button("🚀 Start Scraping"):
                     df = filtered_df
                     st.info(f"📅 Filtered to {len(df)} posts within custom date range.")
             st.session_state.posts_df = df
-            display_cols = ["author_name", "author_job_title", "posted", "likes", "comments", "content", "post_link"]
+            display_cols = ["posted", "likes", "comments", "content", "post_link"]
             existing_cols = [col for col in display_cols if col in df.columns]
             if len(df) > 0:
                 st.success(f"✅ Found {len(df)} matching posts after filtering.")
